@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<style>
+    body.debug .container,
+    body.debug .container-fluid {
+        outline: 2px double blue;
+        outline-offset: -2px;
+    }
+
+    body.debug .row {
+        outline: 2px dashed red;
+        outline-offset: -2px;
+    }
+
+    body.debug [class*="col-"] {
+        outline: 2px dotted forestgreen;
+        outline-offset: -3px;
+    }
+</style>
+
+<body class="">
+    <header class="container-fluid">
+        <section class="row">
+            <div class="col-12 nav">
+                <h1>Sammy's Sammies</h1>
+            </div>
+        </section>
+    </header>
+
+    <main class="container-fluid text-light">
+        <section class="row h-100">
+            <!-- this is my menu section -->
+            <div class="col-12 col-md-8 p-2">
+                <section class="row p-4">
+                    <div class="col-12 text-center">
+                        <h1>MENU</h1>
+                    </div>
+                    <!-- here are my menu items -->
+                    <section class="row h-50 round-border p-3">
+                        <!-- this is my sandwich button -->
+                        <div class="col-12 col-md-4 cursor-pointer sandwich" onclick="buySandwich('BLT')">
+                            <div class="sandwich round-border">
+                                <img class="img-fluid"
+                                    src="https://www.southernliving.com/thmb/zaswaAkeh41S8W4f1KDho5yHarE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/the-sl-blt-01-4X3-b322a15a36fc436abf2796092283a40c.jpg"
+                                    alt="">
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <p>BLT</p>
+                                <p>$8.95</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 cursor-pointer sandwich" onclick="buySandwich('PB&J Supreme')">
+                            <div class="sandwich round-border">
+                                <img class="img-fluid " src="https://i.ytimg.com/vi/miOO1TzGRuk/maxresdefault.jpg"
+                                    alt="">
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <p>PB&J Supreme</p>
+                                <p>$12</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 cursor-pointer" onclick="buySandwich('PBBD')">
+                            <div class="bg-danger round-border sandwich">
+                                <img class="img-fluid"
+                                    src="https://pickyeaterblog.com/wp-content/uploads/2019/06/Anjali_PBReinvented14.jpg"
+                                    alt="">
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <p>PBBD</p>
+                                <p>$20</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 cursor-pointer" onclick="buySandwich('Milk Shoe Special')">
+                            <div class="bg-danger round-border">
+                                <img class="img-fluid"
+                                    src="https://bestwalkingshoereviews.com/wp-content/uploads/2015/11/shoe-sandwich.jpg"
+                                    alt="">
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <p>Milk Shoe Special</p>
+                                <p>Market Price</p>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+            </div>
+            <!-- this is my checkout section -->
+            <div class="col-12 col-md-4 pt-6 p-3">
+                <!-- this is my checkout menu -->
+                <div class="round-border p-2" id="cart">
+                    <!-- ANCHOR this is my menu template -->
+                    <!-- <div class="d-flex justify-content-between">
+                        <i class="mdi mdi-close text-danger"></i>
+                        <p>sandiwch name</p>
+                        <p>quantity</p>
+                        <p>sandiwch price</p>
+                    </div> -->
+                </div>
+                <div class="d-flex justify-content-between">
+                    <p>Total:</p>
+                    <p>$<span id="total">0</span></p>
+                </div>
+                <div class="d-flex justify-content-end pt-3">
+                    <button onclick="checkout()">BUY</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
